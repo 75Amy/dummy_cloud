@@ -7,7 +7,7 @@ pipeline {
         stage('Scan') {
             steps {
                 withSonarQubeEnv(installationName: 'sq1') {
-                    sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=project -Dsonar.login=admin -Dsonar.password=admin'
+                    sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.login=admin -Dsonar.password=admin'
 
                 }
             }
