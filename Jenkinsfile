@@ -7,7 +7,7 @@ pipeline {
         stage('Scan') {
             steps {
                 withSonarQubeEnv(installationName: 'sq1') {
-                    mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:2.16.1:sonar -Dsonar.login="admin" -Dsonar.password="admin"
+                    ./mvnw clean org.sonarsource.scanner.maven:sonar-maven-plugin:2.16.1:sonar -Dsonar.login="admin" -Dsonar.password="admin"
 
                 }
             }
